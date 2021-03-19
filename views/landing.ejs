@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<%-include('partials/header')-%>
+<link rel="stylesheet" href="/stylesheets/css/viewsCSS/landing.css">
+<body>
+    <div class="row">
+        <div class="navBar col-md-1">
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="icons">
+                <div class="about" style="margin-bottom: 2rem">
+                    <a href="#"><i class="fas fa-user-friends fa-3x"></i><span style="color: #948f8d; display: block;">About Us</span></a>
+                </div>
+                <div id="contact">
+                    <a href="#"><i class="far fa-address-book fa-3x"></i><span style="color: #948f8d; display: block;">Contact Us</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-11">
+            <div id="text">
+                <h1>SOS Assist</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                    .Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, but also the leap into electronic typesetting, 
+                    remaining essentially unchanged
+                </p>
+                <a class="btn btn-sm" id="signup" href="/signup">Sign Up!</a>
+                <a class="btn btn-sm" id="signin" href="/login">Login!</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%-include('partials/footer')-%>
+<script>
+    $(document).ready(function(){
+	$('.navBar').hover(function(){
+		$("#nav-icon2").toggleClass('open');
+        $(".icons").toggle(100);
+	});
+});
+</script>
+</html>
