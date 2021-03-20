@@ -22,8 +22,8 @@ const User = require('./models/userModel');
 // ------------Import Routes--------------//
 let authRoutes = require('./routes/authRoutes'),
     indexRoutes = require('./routes/indexRoutes'),
-    requestRoutes = require('./routes/requestsRoutes');
-// google_maps = require('./public/assets/js/google_maps');
+    requestRoutes = require('./routes/requestsRoutes'),
+    acceptRoutes = require("./routes/acceptRoutes");
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -68,6 +68,7 @@ app.use(function(req, res, next) {
 app.use(indexRoutes);
 app.use(authRoutes);
 app.use(requestRoutes);
+app.use(acceptRoutes);
 // app.use(google_maps);
 
 app.listen(process.env.APP_LISTEN_PORT, function() {
