@@ -1,0 +1,8 @@
+# enviroment variables
+.env
+
+# node modules
+node_modules
+
+# misc. files
+waste
