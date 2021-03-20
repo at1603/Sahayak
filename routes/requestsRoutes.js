@@ -16,6 +16,8 @@ router.post("/request/send/medical/:id", middleware.isLoggedIn, function(req, re
         handler: {
             id: req.params.id,
             username: req.user.username,
+            firstName: req.user.name.firstName,
+            lastName: req.user.name.lastName
         },
         sourceLocation: {
             lat: latitude,
@@ -49,7 +51,7 @@ router.post("/request/send/medical/:id", middleware.isLoggedIn, function(req, re
                             return deg * (Math.PI / 180)
                         }
                         var distance_from_location = getDistanceFromLatLonInKm(latitude, longitude, location.geoCoded.lat, location.geoCoded.long) //distance in meters between your location and the marker
-                        if (distance_from_location <= 1) {
+                        if (distance_from_location <= 100) {
                             requestedUsers.push(location._id);
                         }
                     })(users[j]);
@@ -69,15 +71,15 @@ router.post("/request/send/medical/:id", middleware.isLoggedIn, function(req, re
                                     generatedAt: Date.now(),
                                     description: req.body.message,
                                     handler: {
-                                        id : req.user._id,
-                                        username: req.user.username
+                                        id: req.user._id,
+                                        username: req.user.username,    
                                     },
                                     relatedRequest: newRequest._id
                                 };
-                                UserActivity.create(newActivity, function(error, newActivity){
-                                    if(error){
+                                UserActivity.create(newActivity, function(error, newActivity) {
+                                    if (error) {
                                         console.log(err);
-                                    }else{
+                                    } else {
                                         req.flash("success", "Medical SOS Request Sent!");
                                         res.redirect("/dashboard");
                                     }
@@ -87,9 +89,6 @@ router.post("/request/send/medical/:id", middleware.isLoggedIn, function(req, re
                     }
                 });
             }
-            // console.log(users);
-            // var distance=computeDistanceBetween({latitude,longitude})
-            // var books = user.map((item) => {return item.title;});
         });
 
     } else {
@@ -105,6 +104,8 @@ router.post("/request/send/crime/:id", middleware.isLoggedIn, function(req, res)
         handler: {
             id: req.params.id,
             username: req.user.username,
+            firstName: req.user.name.firstName,
+            lastName: req.user.name.lastName
         },
         sourceLocation: {
             lat: req.body.latitude,
@@ -127,15 +128,15 @@ router.post("/request/send/crime/:id", middleware.isLoggedIn, function(req, res)
                             generatedAt: Date.now(),
                             description: req.body.message,
                             handler: {
-                                id : req.user._id,
+                                id: req.user._id,
                                 username: req.user.username
                             },
                             relatedRequest: newRequest._id
                         };
-                        UserActivity.create(newActivity, function(error, newActivity){
-                            if(error){
+                        UserActivity.create(newActivity, function(error, newActivity) {
+                            if (error) {
                                 console.log(err);
-                            }else{
+                            } else {
                                 req.flash("success", "Crime SOS Request Sent!");
                                 res.redirect("/dashboard");
                             }
@@ -148,7 +149,6 @@ router.post("/request/send/crime/:id", middleware.isLoggedIn, function(req, res)
         req.flash("error", "Maximum limit of sending Crime SOS is reached !");
         res.redirect("/dashboard");
     }
-    // console.log(req.body);
 });
 
 //-----------Close Medical request routes------------------//
@@ -174,10 +174,10 @@ router.get("/dashboard/activity/medicalClose/:id", function(req, res) {
                 if (error) {
                     console.log(error);
                 } else {
-                    UserActivity.updateOne({'relatedRequest': req.params.id}, {$set: {'closedAt': Date.now()}}, function(err, updatedLog){
-                        if(err){
+                    UserActivity.updateOne({ 'relatedRequest': req.params.id }, { $set: { 'closedAt': Date.now() } }, function(err, updatedLog) {
+                        if (err) {
                             console.log(err);
-                        } else{
+                        } else {
                             req.flash("success", "SOS Medical Request Closed Successfully!")
                             res.redirect("/dashboard/activityLog");
                         }
@@ -211,10 +211,10 @@ router.get("/dashboard/activity/crimeClose/:id", function(req, res) {
                 if (error) {
                     console.log(error);
                 } else {
-                    UserActivity.updateOne({'relatedRequest': req.params.id}, {$set: {'closedAt': Date.now()}}, function(err, updatedLog){
-                        if(err){
+                    UserActivity.updateOne({ 'relatedRequest': req.params.id }, { $set: { 'closedAt': Date.now() } }, function(err, updatedLog) {
+                        if (err) {
                             console.log(err);
-                        } else{
+                        } else {
                             req.flash("success", "SOS Crime Request Closed Successfully!")
                             res.redirect("/dashboard/activityLog");
                         }
