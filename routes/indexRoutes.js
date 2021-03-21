@@ -10,6 +10,18 @@ const User = require("../models/userModel");
 const Request = require("../models/requestSchema");
 const UserActivity = require("../models/userActivityLogSchema");
 
+router.get("/about", function(req, res){
+    res.render("about");
+});
+
+router.post("/contact", function(req,res){
+    req.flash("success", "Thanks for contacting us!");
+    res.redirect("/contact");
+});
+
+router.get("/contact", function(req, res){
+    res.render("contact");
+});
 
 router.get("/", function(req, res) {
     res.render("landing");
