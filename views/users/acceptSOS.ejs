@@ -46,7 +46,7 @@
         <h3>Answer SOS Requests: </h3>
         <% if(foundAcceptRequests.length > 0){ %>
             <% foundAcceptRequests.forEach(function(request, i){ %> 
-                <% if(!request.handler.id.equals(currentUser._id) && currentUser.acceptedRequests.includes(request._id)) { %> 
+                <% if(!request.handler.id.equals(currentUser._id) && currentUser.acceptedRequests.includes(request._id) && request.currentStatus == "Active") { %> 
                     <ul>
                         <div class="jumbotron" id="acceptedRequest">
                             <span class="badge badge-lg bg-success" style="float: right; margin-right: 1rem; margin-top: 0.5rem">Request Accepted</span>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                     </ul>
-                <% } else if(!request.handler.id.equals(currentUser._id) && !currentUser.acceptedRequests.includes(request._id) && !currentUser.closedRequests.includes(request.id)) { %>
+                <% } else if(!request.handler.id.equals(currentUser._id) && !currentUser.acceptedRequests.includes(request._id) && !currentUser.closedRequests.includes(request.id) && request.currentStatus == "Active") { %>
                     <ul>
                         <div class="jumbotron" id="pendingRequest">
                             <p>SOS Request Type: <strong><%= request.typeOfRequest%></strong></p>
@@ -171,7 +171,7 @@
                 <h5>No Closed Requests Found!</h5>
             <% } else { %>
                 <% foundAcceptRequests.forEach(function(request, i){ %> 
-                    <% if(currentUser.closedRequests.length > 0 && currentUser.closedRequests.includes(request.id)) { %>
+                    <% if(currentUser.closedRequests.length > 0 && currentUser.closedRequests.includes(request.id) || request.currentStatus == "Inactive"){ %>
                         <ul>
                             <div class="jumbotron" id="closedRequest">
                                 <span class="badge badge-lg bg-dark" style="float: right; margin-right: 1rem; margin-top: 0.5rem">Closed</span>
