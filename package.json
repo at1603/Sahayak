@@ -1,5 +1,5 @@
 {
-  "name": "sosassist",
+  "name": "sahayak",
   "version": "1.0.0",
   "description": "Web platform for sending SOS messages. ",
   "main": "app.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pro-Abhinav/SOS-Assist.git"
+    "url": "git+https://github.com/Pro-Abhinav/Sahayak.git"
   },
   "author": "Abhinav Tripathi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pro-Abhinav/SOS-Assist/issues"
+    "url": "https://github.com/Pro-Abhinav/Sahayak/issues"
   },
-  "homepage": "https://github.com/Pro-Abhinav/SOS-Assist#readme",
+  "homepage": "https://github.com/Pro-Abhinav/Sahayakt#readme",
   "dependencies": {
     "-": "0.0.1",
     "async": "^3.2.0",
