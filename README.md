@@ -4,7 +4,7 @@
   </a>
 
   <h3 align="center">SOS Assistance Platform</h3>
-  <h4 align="center">Deployed at <a href="https:sahayak-sos.herokuapp.com/" target="_blank">Sahayak</a>(Best works on desktop or landsacape mode in mobile)</h4>
+  <h4 align="center">Deployed at <a href="https://sahayak-sos.herokuapp.com/" target="_blank">Sahayak</a>(Best works on desktop or landsacape mode in mobile)</h4>
 
 </p>
 
