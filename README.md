@@ -42,7 +42,7 @@
 
 ![Landing Page](https://github.com/Pro-Abhinav/Sahayak/blob/master/public/assets/img/landingPage.png)
 
-Our platform enables users to volunteer and help nearby users in need of any emergency assistance or aid. Through the website, users can send SOS request to other users in  the radius of 2km. Once the SOS request is sent, the nearby users receive the request and they have the choice to either accept the request or reject it depending their personal situation
+Our project "Sahayak" is a community platform that enables users to volunteer and help nearby users in need of any emergency assistance or aid. Through the website, users can send SOS request to other users in the specified radius. Once the SOS request is sent, the nearby users receive the request and they have the choice to either accept the request or reject it depending on their personal situation
 
 * How it is different from others? 
 Our app will be sending SOS messages not only to nearest police/medical stations, assigned relatives but also to the local people who live near the victim’s house.
