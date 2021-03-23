@@ -4,6 +4,7 @@
   </a>
 
   <h3 align="center">SOS Assistance Platform</h3>
+  <h4 align="center">Deployed at <a href="https://sahayak-sos.herokuapp.com/" target="_blank">Sahayak</a>(Best works on desktop or landsacape mode in mobile)</h4>
 
 </p>
 
@@ -39,9 +40,9 @@
 ## About The Project
 
 
-![Landing Page](https://github.com/Pro-Abhinav/Sahayak/blob/master/public/assets/img/landingPage.png)
+![Landing Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/landing.png)
 
-Our platform enables users to volunteer and help nearby users in need of any emergency assistance or aid. Through the website, users can send SOS request to other users in  the radius of 2km. Once the SOS request is sent, the nearby users receive the request and they have the choice to either accept the request or reject it depending their personal situation
+Our project "Sahayak" is a community platform that enables users to volunteer and help nearby users in need of any emergency assistance or aid. Through the website, users can send SOS request to other users in the specified radius. Once the SOS request is sent, the nearby users receive the request and they have the choice to either accept the request or reject it depending on their personal situation
 
 * How it is different from others? 
 Our app will be sending SOS messages not only to nearest police/medical stations, assigned relatives but also to the local people who live near the victim’s house.
@@ -106,6 +107,28 @@ Two APIs are being used
     ```
 
 
+## Screenshots
+
+### Landing Page
+![Landing Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/landing.png)
+### Signup
+![Signup Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/signup.jpeg)
+### Login
+![Login Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/login.jpeg)
+### Dashboard
+![Dashboard Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/dashboard.jpeg)
+### Activity Log
+![Activity Log Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/activityLog.jpeg)
+### Activity Log Timeline
+![Activity Log Timeline](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/activityLogTimeline.jpeg)
+### Accept Requests
+![Accept Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/accept.jpeg)
+### User Settings
+![Settings Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/settings.jpeg)
+### Reset Password
+![Reset Password Page](https://github.com/anmolsahu2k/Sahayak/blob/master/public/assets/img/reset.png)
+
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -131,6 +154,3 @@ Distributed under the MIT License.
 - Anmol Sahu - anmolsahu2k@gmail.com
 
 Project Link: [https://github.com/Pro-Abhinav/Sahayak](https://github.com/Pro-Abhinav/Sahayak)
-
-
-
