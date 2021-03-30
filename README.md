@@ -98,10 +98,8 @@ Two APIs are being used
    ```
 5. Enter other secrets in '.env' file.
     ```dotenv
-
-    PASSPORT_SECRET = "This is my secret"
-    ADMIN_SECRET_CODE = "adminPassword"
-
+    PASSPORT_SECRET = "YOUR SECRET"
+    ADMIN_SECRET_CODE = "YOUR ADMIN PASSWORD"
     APP_LISTEN_PORT = 3000
     MONGO_URL = "DATABASE LINK"
     ```
