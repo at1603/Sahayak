@@ -71,10 +71,6 @@ app.use(requestRoutes);
 app.use(acceptRoutes);
 // app.use(google_maps);
 const PORT = process.env.PORT || 3000;
-<<<<<<< HEAD
 app.listen(PORT, () => {
-=======
-app.listen(PORT, '0.0.0.0', () => {
->>>>>>> d1fc1f4deac0fe0329cb453930eb5b4ab7051941
     console.log(`Our app is running on port ${ PORT }`);
 });
